@@ -1,11 +1,24 @@
-import React from 'react';
-import MyCars from '../components/MyCars'; 
+"use client";
 
-export default function page() {
+import React, { Component } from "react";
+
+import MyCars from "../components/MyCars";
+
+class Page extends Component {
+
+  state = {
+    titre: "Catalogue des véhicules"
+  }
   
-  return (
+    render() {
+        return (
     <div className='page' style={{border: '2px solid red', margin: '20px', padding: '20px'}}>
-      <MyCars />
+      <MyCars title={this.state.titre}/>
     </div>
   )
+    }   
 }
+
+export default Page;
+
+
