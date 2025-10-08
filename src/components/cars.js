@@ -8,7 +8,7 @@ const Car = ({ children, color }) => {
     const colorInfo = color ? (<p>Couleur:{color} </p>) : (<p>Couleur: Néant</p>);
 
     if (children) {
-        return (
+        return(
             <div style={{ border: "2px solid blue", margin: "10px", padding: "10px" }}>
                 <p>Marque:{children} </p>
                 {colorInfo}
@@ -16,7 +16,7 @@ const Car = ({ children, color }) => {
         );
     } else {
         return (
-            < div style={{ border: "2px solid blue", margin: "10px", padding: "10px" }}>
+            <div style={{ border: "2px solid blue", margin: "10px", padding: "10px" }}>
                 <p>Pas de data!</p>
             </div>
         );
@@ -29,13 +29,8 @@ export default Car;
 // {color ? color : "Néant"} => Si la prop color est fournie, on l'affiche, sinon "Néant"
 // {children ? ... : ...} => Si des enfants sont passés au composant, on les affiche, sinon un message par défaut.
 
+/* Autre façon de faire avec un return unique et un opérateur ternaire
 
-/* "use client";
-
-import React from "react";
-
-// Composant React sous forme fonctionnelle
-const Cars = ({ children, color }) => {
   return (
     <div style={{ border: "2px solid blue", margin: "20px", padding: "20px" }}>
       {children ? (
@@ -48,7 +43,6 @@ const Cars = ({ children, color }) => {
       )}
     </div>
   );
-};
 
 export default Cars;
 */
