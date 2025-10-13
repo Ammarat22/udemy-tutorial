@@ -1,5 +1,7 @@
 "use client";
 
+/* on importe le composant Cars.js dans MyCars.js pour l'utiliser dans sous forme d'un seul composant.
+
 import React from 'react';
 import Wrapper from './Wrapper';
 
@@ -23,4 +25,4 @@ const Cars = ({ children, color }) => {
     );
 }
 
-export default Cars;
+export default Cars;*/

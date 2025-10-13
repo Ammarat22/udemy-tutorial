@@ -1,9 +1,28 @@
 "use client";
 
 import React, { Component } from 'react';
-import Cars from './Cars';
+//import Cars from './Cars';
 import Wrapper from './Wrapper';
 import MyHeader from '../MyHeader';
+
+const Cars = ({ children, color }) => {
+
+    //const colorInfo = color ? (<p>Couleur: {color} </p>) : (<p>Couleur: Néant</p>);
+
+    let colorInfo;
+    if (color) {
+        colorInfo = color;
+    } else {
+        colorInfo = "Néant";
+    }
+
+    return children && (
+        <Wrapper>
+                <p>Marque: {children} </p>
+                <p>Couleur: {colorInfo}</p>
+        </Wrapper>
+    );
+}
 
 // Composant React sous forme de classe
 class MyCars extends Component {
