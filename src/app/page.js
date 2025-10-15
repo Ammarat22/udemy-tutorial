@@ -1,24 +1,13 @@
-"use client";
+import App from "@/components/exo1/3 fichiers/App";
 
-import React, { Component } from "react";
+export default function Page() {
 
-import Mycars from "@/components/exo1/3 fichiers/Mycars";
-
-class Page extends Component {
-
-  state = {
-    titre: 'Mon Catalogue Voitures'
-  }
-
-  render() {
-      return (
-        <div className='App'>
-          <Mycars title={this.state.titre} />
-        </div>
-      )
-    }
+  return (
+    <>
+      Bonjour
+    </>
+  )
 }
 
-export default Page;
 
 

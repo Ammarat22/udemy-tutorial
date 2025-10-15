@@ -1,6 +1,7 @@
+"use client";
+
 import { Component } from 'react';
-import Mycars from './components/Mycars';
-import './App.css';
+import Mycars from './Mycars';
 
 class App extends Component {
 
