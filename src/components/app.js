@@ -2,6 +2,7 @@
 
 import { Component } from 'react';
 import Mycars from './exo-1/3 fichiers/my-cars';
+import './app.css'
 
 class App extends Component {
 

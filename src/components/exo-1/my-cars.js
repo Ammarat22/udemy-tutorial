@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import Wrapper from './wrapper';
-import MyHeader from '../my-header';
+import MyHeader from './my-header';
 
 const Cars = ({ children, color }) => {
 
