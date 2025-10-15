@@ -2,25 +2,21 @@
 
 import React, { Component } from "react";
 
-import MyCars from "../components/exo1/MyCars";
+import Mycars from "@/components/exo1/3 fichiers/Mycars";
 
 class Page extends Component {
 
   state = {
-    titre: "Mon Catalogue Voitures",
-    color: "green"
+    titre: 'Mon Catalogue Voitures'
   }
 
   render() {
-    return (
-      <div className="text-center m-5 p-5">
-        <MyCars
-          title={this.state.titre}
-          color={this.state.color}
-        />
-      </div>
-    )
-  }
+      return (
+        <div className='App'>
+          <Mycars title={this.state.titre} />
+        </div>
+      )
+    }
 }
 
 export default Page;
