@@ -1,7 +1,7 @@
 "use client";
 
 import { Component } from 'react';
-import Mycars from './Mycars';
+import Mycars from './exo-1/3 fichiers/my-cars';
 
 class App extends Component {
 

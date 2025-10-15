@@ -1,13 +1,9 @@
-import App from "@/components/exo1/3 fichiers/App";
+import App from "@/components/app";
 
 export default function Page() {
-
   return (
     <>
-      Bonjour
+      <App />
     </>
-  )
+  );
 }
-
-
-
