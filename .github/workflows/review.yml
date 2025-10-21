@@ -1,30 +1,30 @@
 name: Review code
 run-name: Review code on push and pull request
 on:
-    push:
-        branches:
-            - main
-    pull_request:
-        types:
-            - opened
-            - synchronize
-            - reopened
-            - labeled
-            - unlabeled
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+      - unlabeled
 jobs:
-    review:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-            - name: Set up Node.js 18
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "18"
-                  cache: "npm"
-            - name: Install dependencies
-              run: npm install
-            - name: Build project
-              run: npm run build --if-present
-            - name: Remove .next folder
-              run: rm -rf .next    
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build --if-present
+      - name: Remove .next folder
+        run: rm -rf .next
