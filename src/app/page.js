@@ -13,7 +13,6 @@ export default function Home() {
           priority
         />
         
-        
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
@@ -26,7 +25,6 @@ export default function Home() {
             Save and see your 
             changes instantly.
           </li>
-
 
         </ol>
 
