@@ -5,15 +5,27 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky"
   },
   "dependencies": {
+    "next": "15.5.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.4"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@tailwindcss/postcss": "^4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.5",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4"
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx|json|css|scss|md)": [
+      "npx prettier --write",
+      "npx eslint --fix --ext .js,.jsx,.ts,.tsx"
+    ]
   }
 }
