@@ -11,7 +11,21 @@ class App extends Component {
   }
 
   changeTitle = (e) => {
-    console.log(e);
+    this.setState({
+      titre: 'Mon nouveau titre'
+    })
+  }
+
+  changeViaParm = (titre) =>{
+    this.setState({
+      titre: titre
+    })
+  }
+
+  changeViaBind = (param) => {
+     this.setState({
+      titre: param
+    })
   }
 
   render() {
@@ -19,6 +33,8 @@ class App extends Component {
       <div className='App'>
         <Mycars title={this.state.titre} />
         <button onClick={this.changeTitle}>Changer le titre</button>
+        <button onClick={() => this.changeViaParm('Titre via un param')}>Changer le titre</button>
+        <button onClick={() => this.changeViaBind.bind(this, 'Titre via Bind')}>Via Bind</button>
       </div>
     )
   }
